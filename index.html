@@ -243,7 +243,7 @@
     .features { padding: 40px 0 72px; border-top: none; }
     .features-grid { display: grid; grid-template-columns: 1fr; gap: 44px; }
     .feature { display: flex; gap: 20px; align-items: flex-start; }
-    .feature:last-child { margin-bottom: 16px; }
+    .feature:last-child { margin-bottom: 44px; }
     .feature-icon {
       width: 48px; height: 48px; flex-shrink: 0;
       background: var(--off-white); border-radius: 12px;
@@ -269,6 +269,9 @@
       padding: 100px 0;
       position: relative;
       overflow: hidden;
+    }
+    @media (max-width: 899px) {
+      .quote-section { padding: 64px 0; }
     }
     .quote-bg-mark {
       position: absolute;
@@ -525,7 +528,7 @@
   <div class="container">
     <div class="quote-bg-mark">&#x201C;</div>
     <div class="quote-inner">
-      <p class="quote-text">Come and see.</p>
+      <p class="quote-text">Come, and you will see.</p>
       <p class="quote-attr">John 1:39 — An invitation to everyone.</p>
     </div>
   </div>
@@ -535,7 +538,7 @@
 <section class="closing">
   <div class="container">
     <h2>Start wherever you are.</h2>
-    <p>No background required. No pressure.<br>Just an open door into the Catholic faith — on your terms, at your pace.</p>
+    <p>No background required. No pressure. Just an open door into the Catholic faith — on your terms, at your pace.</p>
     <a href="#" class="cta-btn">Start exploring</a>
   </div>
 </section>
