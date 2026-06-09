@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bible Study — Catholic Pocket Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #ffffff;
+      --off-white: #f9f8f5;
+      --ink: #1a1a18;
+      --ink-light: #4a4a46;
+      --rule: #d9d6ce;
+      --dark-bg: #1a1a18;
+      --dark-text: #e8e5de;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── WRAPPER ─── */
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ══════════════════════════════
+       NAV
+    ══════════════════════════════ */
+    .site-nav {
+      border-bottom: 1px solid var(--rule);
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      z-index: 100;
+    }
+    .site-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-icon {
+      width: 32px; height: 32px;
+      background: var(--ink);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .nav-icon svg { width: 16px; height: 16px; }
+    .nav-brand {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+    }
+    .nav-links {
+      display: none;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 14px;
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links { display: flex; }
+      .nav-cta {
+        display: inline-block;
+        background: var(--ink);
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: opacity 0.15s;
+      }
+      .nav-cta:hover { opacity: 0.75; }
+    }
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    .hero {
+      padding: 64px 0 56px;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-content { max-width: 560px; }
+    .eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--ink-light);
+    }
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 8vw, 80px);
+      line-height: 1.05;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      color: var(--ink);
+    }
+    .hero-headline em { font-style: italic; }
+    .hero-body {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink-light);
+      margin-bottom: 36px;
+      max-width: 440px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      padding: 15px 30px;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .cta-btn:hover { opacity: 0.75; }
+
+    /* phone mockup in hero on desktop */
+    .hero-mockup {
+      display: none;
+      justify-content: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero { padding: 96px 0 80px; }
+      .hero .container {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+      }
+      .hero-mockup { display: flex; }
+    }
+
+    /* ══════════════════════════════
+       PHONE MOCKUP (shared styles)
+    ══════════════════════════════ */
+    .phone-frame {
+      width: 260px;
+      background: #fff;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.22), 0 4px 16px rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+    .phone-notch-bar {
+      background: #f0f0ee;
+      padding: 12px 18px 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 600;
+      color: #111;
+      font-family: 'Inter', sans-serif;
+    }
+    .phone-notch-icons { display: flex; gap: 5px; align-items: center; font-size: 9px; }
+    .phone-body { padding: 16px 18px 22px; }
+    .ph-date { font-size: 9px; color: #999; margin-bottom: 3px; }
+    .ph-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      line-height: 1.3;
+      font-weight: 400;
+      color: #1a1a18;
+      margin-bottom: 2px;
+    }
+    .ph-season { font-size: 9px; color: #999; margin-bottom: 14px; }
+    .ph-card {
+      background: #f4f3f0;
+      border-radius: 9px;
+      padding: 13px;
+      margin-bottom: 12px;
+    }
+    .ph-label {
+      font-size: 7.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 4px;
+    }
+    .ph-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      color: #1a1a18;
+      margin-bottom: 7px;
+    }
+    .ph-card-body { font-size: 8.5px; line-height: 1.55; color: #666; }
+    .ph-readings-link {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 8px; font-weight: 500; color: #1a1a18;
+      border-top: 1px solid #e2e0db;
+      padding-top: 10px; margin-top: 4px;
+    }
+    .ph-first-reading { margin-top: 12px; }
+    .ph-first-reading .ph-card-title { font-size: 11px; margin-bottom: 0; }
+
+    /* ══════════════════════════════
+       DARK MOCKUP BAND (mobile only)
+    ══════════════════════════════ */
+    .mockup-band {
+      background: var(--dark-bg);
+      padding: 52px 0;
+      display: flex;
+      justify-content: center;
+    }
+    @media (min-width: 900px) {
+      .mockup-band { display: none; }
+    }
+
+    /* ══════════════════════════════
+       FEATURES
+    ══════════════════════════════ */
+    .features {
+      padding: 72px 0;
+      border-top: 1px solid var(--rule);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+    .feature {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .feature-icon {
+      width: 44px; height: 44px;
+      flex-shrink: 0;
+      background: var(--off-white);
+      border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .feature-icon svg { width: 22px; height: 22px; }
+    .feature-text h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .feature-text p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--ink-light);
+    }
+
+    @media (min-width: 600px) {
+      .features-grid { grid-template-columns: 1fr 1fr; gap: 40px 48px; }
+    }
+    @media (min-width: 900px) {
+      .features-grid { grid-template-columns: repeat(3, 1fr); }
+      .features { padding: 96px 0; }
+    }
+
+    /* ══════════════════════════════
+       QUOTE
+    ══════════════════════════════ */
+    .quote-section {
+      background: var(--dark-bg);
+      padding: 80px 0;
+    }
+    .quote-inner {
+      max-width: 640px;
+    }
+    .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 100px;
+      line-height: 0.5;
+      color: #3a3a36;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--dark-text);
+      margin-bottom: 24px;
+    }
+    .quote-attr {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    /* ══════════════════════════════
+       CLOSING CTA
+    ══════════════════════════════ */
+    .closing {
+      padding: 96px 0;
+      text-align: center;
+    }
+    .closing h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.1;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .closing p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink-light);
+      max-width: 380px;
+      margin: 0 auto 40px;
+    }
+
+    /* ══════════════════════════════
+       FOOTER
+    ══════════════════════════════ */
+    .site-footer {
+      border-top: 1px solid var(--rule);
+      padding: 24px 0;
+    }
+    .site-footer .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-copy { font-size: 12px; color: #aaa; }
+    .footer-links { display: flex; gap: 28px; }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--ink); }
+
+    @media (min-width: 600px) {
+      .site-footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <header class="site-nav">
+    <div class="container">
+      <div class="nav-left">
+        <div class="nav-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <!-- vertical beam -->
+            <rect x="13.5" y="4" width="5" height="24" rx="1" fill="white"/>
+            <!-- horizontal beam, higher up like a traditional cross -->
+            <rect x="6" y="10" width="20" height="5" rx="1" fill="white"/>
+          </svg>
+        </div>
+        <span class="nav-brand">Bible Study</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Readings</a></li>
+        <li><a href="#">Mass Mode</a></li>
+        <li><a href="#">Formation</a></li>
+      </ul>
+      <a href="#" class="nav-cta">Start exploring</a>
+    </div>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="eyebrow">Catholic Pocket Companion</p>
+        <h1 class="hero-headline">Your faith,<br><em>always</em><br>within reach.</h1>
+        <p class="hero-body">Sunday readings, Mass guidance, and faith formation — thoughtfully designed for anyone drawn to the Catholic tradition.</p>
+        <a href="#" class="cta-btn">Start exploring</a>
+      </div>
+
+      <!-- Phone mockup shown only on desktop (inside hero) -->
+      <div class="hero-mockup">
+        <div class="phone-frame">
+          <div class="phone-notch-bar">
+            <span>9:41</span>
+            <div class="phone-notch-icons"><span>▲▲▲</span><span>WiFi</span><span>🔋</span></div>
+          </div>
+          <div class="phone-body">
+            <div class="ph-date">Sunday, June 14</div>
+            <div class="ph-title">Twenty-Third Sunday<br>in Ordinary Time</div>
+            <div class="ph-season">Ordinary Time</div>
+            <div class="ph-card">
+              <div class="ph-label">Theme of the Week</div>
+              <div class="ph-card-title">Choosing what truly lasts</div>
+              <div class="ph-card-body">This week the readings invite us to weigh our choices honestly and to set our hearts on the things that endure rather than the things that pass away.</div>
+            </div>
+            <div class="ph-readings-link">📖 This Sunday's readings</div>
+            <div class="ph-first-reading">
+              <div class="ph-label">First Reading</div>
+              <div class="ph-card-title">Wisdom 9:13-18</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PHONE MOCKUP BAND (mobile / tablet only) ── -->
+  <div class="mockup-band">
+    <div class="phone-frame">
+      <div class="phone-notch-bar">
+        <span>9:41</span>
+        <div class="phone-notch-icons"><span>▲▲▲</span><span>WiFi</span><span>🔋</span></div>
+      </div>
+      <div class="phone-body">
+        <div class="ph-date">Sunday, June 14</div>
+        <div class="ph-title">Twenty-Third Sunday<br>in Ordinary Time</div>
+        <div class="ph-season">Ordinary Time</div>
+        <div class="ph-card">
+          <div class="ph-label">Theme of the Week</div>
+          <div class="ph-card-title">Choosing what truly lasts</div>
+          <div class="ph-card-body">This week the readings invite us to weigh our choices honestly and to set our hearts on the things that endure rather than the things that pass away.</div>
+        </div>
+        <div class="ph-readings-link">📖 This Sunday's readings</div>
+        <div class="ph-first-reading">
+          <div class="ph-label">First Reading</div>
+          <div class="ph-card-title">Wisdom 9:13-18</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FEATURES ── -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Sunday Readings</h3>
+            <p>See this week's Mass readings at a glance. Dive deeper into Scripture, themes, and context whenever you're ready.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Mass Mode</h3>
+            <p>Follow along at Mass with real-time guidance through the Order of the Mass. Perfect for newcomers and seasoned Catholics alike.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="feature-text">
+            <h3>Formation</h3>
+            <p>Learn the faith at your own pace — the Creed, the sacraments, the saints, and the story of the Church, one step at a time.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── QUOTE ── -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-inner">
+        <span class="quote-mark">"</span>
+        <p class="quote-text">"Come and see."</p>
+        <p class="quote-attr">John 1:39 — An invitation to everyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLOSING ── -->
+  <section class="closing">
+    <div class="container">
+      <h2>Start wherever<br>you are.</h2>
+      <p>No background required. No pressure. Just an open door into the Catholic faith — on your terms, at your pace.</p>
+      <a href="#" class="cta-btn">Start exploring</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copy">© 2026 Bible Study</p>
+      <nav class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+        <a href="#">Feedback</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
