@@ -99,8 +99,16 @@
 
     .hero-mockup { display: flex; justify-content: center; align-items: center; }
 
+    /* Mobile: dark stage with phone cropped at halfway */
     @media (max-width: 899px) {
-      .hero-mockup { margin-top: 8px; }
+      .hero-mockup {
+        background: var(--dark-bg);
+        margin: 0 -24px; /* bleed to edges */
+        padding: 48px 0 0;
+        overflow: hidden;
+        height: 360px;
+        align-items: flex-start;
+      }
     }
 
     @media (min-width: 900px) {
