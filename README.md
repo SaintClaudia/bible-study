@@ -1,14 +1,30 @@
-# Bible Study
+# ✝️ Bible Study — Catholic Pocket Companion
 
-A responsive web app for **Bible Study**, a Catholic pocket companion app featuring Sunday readings, Mass Mode guidance, and faith formation.
+> *Your faith, always within reach.*
 
-## Built with
+A responsive web app designed as a Catholic pocket companion — featuring Sunday readings, Mass Mode guidance, and faith formation content. Built as an MVP with a mobile-first approach, no frameworks, just clean HTML & CSS.
+
+## 🌐 Live Site
+
+👉 [saintclaudia.github.io/bible-study](https://saintclaudia.github.io/bible-study)
+
+## ✨ Features
+
+- **Sunday Readings** — This week's Mass readings with Scripture context and themes
+- **Mass Mode** — Real-time guidance through the Order of the Mass
+- **Formation** — Learn the faith at your own pace: the Creed, sacraments, saints, and Church history
+
+## 🛠 Built With
+
 - HTML5 & CSS3 (no frameworks)
 - Playfair Display + Inter (Google Fonts)
-- Fully responsive: mobile, tablet, and desktop
+- Fully responsive — mobile, tablet, and desktop
 
-## Live site
-[View on GitHub Pages](https://YOUR_USERNAME.github.io/bible-study-lp/bible_study_lp.html)
+## 🗺 Roadmap
 
-## License
+- [ ] Full interior pages (Readings, Mass Mode, Formation)
+- [ ] Native mobile app (future)
+
+## 📄 License
+
 MIT
