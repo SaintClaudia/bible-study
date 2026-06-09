@@ -21,7 +21,6 @@
     }
 
     html { font-size: 16px; }
-
     body {
       font-family: 'Inter', sans-serif;
       background: var(--white);
@@ -29,7 +28,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ─── WRAPPER ─── */
     .container {
       width: 100%;
       max-width: 1160px;
@@ -37,538 +35,548 @@
       padding: 0 24px;
     }
 
-    /* ══════════════════════════════
-       NAV
-    ══════════════════════════════ */
+    /* ══ NAV ══ */
     .site-nav {
       border-bottom: 1px solid var(--rule);
-      position: sticky;
-      top: 0;
+      position: sticky; top: 0;
       background: var(--white);
       z-index: 100;
     }
     .site-nav .container {
-      display: flex;
-      align-items: center;
+      display: flex; align-items: center;
       justify-content: space-between;
-      padding-top: 18px;
-      padding-bottom: 18px;
+      padding-top: 18px; padding-bottom: 18px;
     }
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .nav-left { display: flex; align-items: center; gap: 10px; }
     .nav-icon {
       width: 32px; height: 32px;
-      background: var(--ink);
-      border-radius: 6px;
+      background: var(--ink); border-radius: 6px;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
-    .nav-icon svg { width: 16px; height: 16px; }
-    .nav-brand {
-      font-size: 15px;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      color: var(--ink);
-    }
-    .nav-links {
-      display: none;
-      gap: 32px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 14px;
-      color: var(--ink-light);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
+    .nav-icon svg { width: 20px; height: 20px; }
+    .nav-brand { font-size: 15px; font-weight: 500; letter-spacing: 0.01em; color: var(--ink); }
+    .nav-links { display: none; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 14px; color: var(--ink-light); text-decoration: none; transition: color 0.15s; }
     .nav-links a:hover { color: var(--ink); }
-    .nav-cta {
-      display: none;
-    }
+    .nav-cta { display: none; }
 
     @media (min-width: 768px) {
       .nav-links { display: flex; }
       .nav-cta {
-        display: inline-block;
-        background: var(--ink);
-        color: var(--white);
-        font-size: 13px;
-        font-weight: 500;
-        padding: 10px 20px;
-        border-radius: 3px;
-        text-decoration: none;
-        transition: opacity 0.15s;
+        display: inline-block; background: var(--ink); color: var(--white);
+        font-size: 13px; font-weight: 500; padding: 10px 20px;
+        border-radius: 8px; text-decoration: none; transition: opacity 0.15s;
       }
       .nav-cta:hover { opacity: 0.75; }
     }
 
-    /* ══════════════════════════════
-       HERO
-    ══════════════════════════════ */
-    .hero {
-      padding: 64px 0 56px;
-    }
-    .hero .container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 48px;
-      align-items: center;
-    }
+    /* ══ HERO ══ */
+    .hero { padding: 64px 0 56px; }
+    .hero .container { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
     .hero-content { max-width: 560px; }
     .eyebrow {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--ink-light); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
     }
-    .eyebrow::before {
-      content: '';
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: var(--ink-light);
-    }
+    .eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--ink-light); }
     .hero-headline {
       font-family: 'Playfair Display', serif;
       font-size: clamp(48px, 8vw, 80px);
-      line-height: 1.05;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      margin-bottom: 24px;
-      color: var(--ink);
+      line-height: 1.05; font-weight: 400; letter-spacing: -0.02em;
+      margin-bottom: 24px; color: var(--ink);
     }
     .hero-headline em { font-style: italic; }
-    .hero-body {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--ink-light);
-      margin-bottom: 36px;
-      max-width: 440px;
-    }
+    .hero-body { font-size: 16px; line-height: 1.7; color: var(--ink-light); margin-bottom: 36px; max-width: 440px; }
     .cta-btn {
-      display: inline-block;
-      background: var(--ink);
-      color: var(--white);
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      padding: 15px 30px;
-      border-radius: 3px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      transition: opacity 0.15s;
+      display: inline-block; background: var(--ink); color: var(--white);
+      font-size: 14px; font-weight: 500; letter-spacing: 0.01em;
+      padding: 15px 30px; border-radius: 8px; border: none;
+      cursor: pointer; text-decoration: none; transition: opacity 0.15s;
     }
     .cta-btn:hover { opacity: 0.75; }
 
-    /* phone mockup in hero on desktop */
-    .hero-mockup {
-      display: none;
-      justify-content: center;
-    }
+    .hero-mockup { display: none; justify-content: center; align-items: center; }
 
     @media (min-width: 900px) {
       .hero { padding: 96px 0 80px; }
-      .hero .container {
-        grid-template-columns: 1fr 1fr;
-        gap: 64px;
-      }
+      .hero .container { grid-template-columns: 1fr 1fr; gap: 64px; }
       .hero-mockup { display: flex; }
     }
 
-    /* ══════════════════════════════
-       PHONE MOCKUP (shared styles)
-    ══════════════════════════════ */
+    /* ══ PHONE FRAME (shared) ══ */
     .phone-frame {
-      width: 260px;
-      background: #fff;
-      border-radius: 32px;
+      width: 300px;
+      background: #f5f5f3;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 32px 80px rgba(0,0,0,0.22), 0 4px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
       flex-shrink: 0;
+      border: 3px solid #1a1a18;
     }
-    .phone-notch-bar {
-      background: #f0f0ee;
-      padding: 12px 18px 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 10px;
-      font-weight: 600;
-      color: #111;
-      font-family: 'Inter', sans-serif;
+    .phone-status-bar {
+      background: #f5f5f3;
+      padding: 14px 20px 8px;
+      display: flex; justify-content: space-between; align-items: center;
     }
-    .phone-notch-icons { display: flex; gap: 5px; align-items: center; font-size: 9px; }
-    .phone-body { padding: 16px 18px 22px; }
-    .ph-date { font-size: 9px; color: #999; margin-bottom: 3px; }
+    .phone-status-bar .time { font-size: 12px; font-weight: 600; color: #111; font-family: 'Inter', sans-serif; }
+    .phone-status-bar .icons { display: flex; gap: 6px; align-items: center; }
+    .phone-status-bar .icons svg { width: 14px; height: 14px; }
+
+    .phone-scroll { background: #ffffff; }
+    .phone-header { padding: 16px 20px 12px; background: #fff; }
+    .ph-date { font-size: 11px; color: #999; margin-bottom: 4px; font-family: 'Inter', sans-serif; }
     .ph-title {
       font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      line-height: 1.3;
-      font-weight: 400;
-      color: #1a1a18;
-      margin-bottom: 2px;
+      font-size: 20px; line-height: 1.25; font-weight: 400; color: #1a1a18; margin-bottom: 3px;
     }
-    .ph-season { font-size: 9px; color: #999; margin-bottom: 14px; }
+    .ph-season-pill {
+      display: inline-block; background: #f0efec; border-radius: 20px;
+      padding: 3px 10px; font-size: 9px; color: #888; font-family: 'Inter', sans-serif;
+      margin-bottom: 14px; margin-top: 4px;
+    }
     .ph-card {
-      background: #f4f3f0;
-      border-radius: 9px;
-      padding: 13px;
-      margin-bottom: 12px;
+      background: #f4f3f0; border-radius: 12px;
+      padding: 14px 16px; margin: 0 16px 12px;
     }
     .ph-label {
-      font-size: 7.5px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 4px;
+      font-size: 8px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #999; margin-bottom: 5px; font-family: 'Inter', sans-serif;
     }
     .ph-card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 13px;
-      color: #1a1a18;
-      margin-bottom: 7px;
+      font-size: 15px; color: #1a1a18; margin-bottom: 8px;
     }
-    .ph-card-body { font-size: 8.5px; line-height: 1.55; color: #666; }
-    .ph-readings-link {
-      display: flex; align-items: center; gap: 5px;
-      font-size: 8px; font-weight: 500; color: #1a1a18;
-      border-top: 1px solid #e2e0db;
-      padding-top: 10px; margin-top: 4px;
-    }
-    .ph-first-reading { margin-top: 12px; }
-    .ph-first-reading .ph-card-title { font-size: 11px; margin-bottom: 0; }
+    .ph-card-body { font-size: 10px; line-height: 1.55; color: #666; font-family: 'Inter', sans-serif; }
 
-    /* ══════════════════════════════
-       DARK MOCKUP BAND (mobile only)
-    ══════════════════════════════ */
+    .ph-readings-row {
+      display: flex; align-items: center; gap: 6px;
+      margin: 0 16px 0; padding: 10px 0;
+      border-top: 1px solid #ebebeb;
+      font-size: 10px; font-weight: 600; color: #1a1a18; font-family: 'Inter', sans-serif;
+    }
+    .ph-readings-row svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    .ph-reading-item {
+      margin: 8px 16px 0;
+      border: 1px solid #ebebeb;
+      border-radius: 10px;
+      padding: 11px 14px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .ph-reading-item-left .ph-label { margin-bottom: 2px; }
+    .ph-reading-item-left .ph-card-title { font-size: 13px; margin-bottom: 0; }
+    .ph-reading-chevron { color: #bbb; font-size: 10px; }
+
+    /* bottom nav */
+    .phone-bottom-nav {
+      background: #fff;
+      border-top: 1px solid #ebebeb;
+      padding: 10px 0 14px;
+      display: flex; justify-content: space-around; align-items: center;
+      margin-top: 16px;
+    }
+    .ph-nav-item {
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      font-size: 9px; font-family: 'Inter', sans-serif; color: #aaa; font-weight: 500;
+    }
+    .ph-nav-item.active { color: #1a1a18; }
+    .ph-nav-item svg { width: 20px; height: 20px; }
+
+    /* ══ DARK MOCKUP BAND (mobile only) ══ */
     .mockup-band {
-      background: var(--dark-bg);
-      padding: 52px 0;
-      display: flex;
-      justify-content: center;
+      background: var(--dark-bg); padding: 60px 0;
+      display: flex; justify-content: center;
     }
-    @media (min-width: 900px) {
-      .mockup-band { display: none; }
-    }
+    @media (min-width: 900px) { .mockup-band { display: none; } }
 
-    /* ══════════════════════════════
-       FEATURES
-    ══════════════════════════════ */
-    .features {
-      padding: 72px 0;
-      border-top: 1px solid var(--rule);
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 44px;
-    }
-    .feature {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
+    /* ══ FEATURES ══ */
+    .features { padding: 72px 0; border-top: 1px solid var(--rule); }
+    .features-grid { display: grid; grid-template-columns: 1fr; gap: 44px; }
+    .feature { display: flex; gap: 20px; align-items: flex-start; }
     .feature-icon {
-      width: 44px; height: 44px;
-      flex-shrink: 0;
-      background: var(--off-white);
-      border-radius: 11px;
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 2px;
+      width: 48px; height: 48px; flex-shrink: 0;
+      background: var(--off-white); border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
     }
-    .feature-icon svg { width: 22px; height: 22px; }
+    .feature-icon svg { width: 26px; height: 26px; }
     .feature-text h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin-bottom: 8px;
-      color: var(--ink);
+      font-size: 20px; font-weight: 700; letter-spacing: -0.01em;
+      margin-bottom: 8px; color: var(--ink);
     }
-    .feature-text p {
-      font-size: 14px;
-      line-height: 1.7;
-      color: var(--ink-light);
-    }
+    .feature-text p { font-size: 14px; line-height: 1.7; color: var(--ink-light); }
 
-    @media (min-width: 600px) {
-      .features-grid { grid-template-columns: 1fr 1fr; gap: 40px 48px; }
-    }
+    @media (min-width: 600px) { .features-grid { grid-template-columns: 1fr 1fr; gap: 40px 48px; } }
     @media (min-width: 900px) {
       .features-grid { grid-template-columns: repeat(3, 1fr); }
       .features { padding: 96px 0; }
     }
 
-    /* ══════════════════════════════
-       QUOTE
-    ══════════════════════════════ */
+    /* ══ QUOTE ══ */
     .quote-section {
       background: var(--dark-bg);
-      padding: 80px 0;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .quote-bg-mark {
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(280px, 40vw, 480px);
+      line-height: 1;
+      color: #252522;
+      pointer-events: none;
+      user-select: none;
+      font-weight: 400;
     }
     .quote-inner {
-      max-width: 640px;
-    }
-    .quote-mark {
-      font-family: 'Playfair Display', serif;
-      font-size: 100px;
-      line-height: 0.5;
-      color: #3a3a36;
-      margin-bottom: 24px;
-      display: block;
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
     }
     .quote-text {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.25;
-      font-weight: 700;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.2;
+      font-weight: 400;
+      font-style: italic;
       color: var(--dark-text);
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
     .quote-attr {
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: #666;
-    }
-
-    /* ══════════════════════════════
-       CLOSING CTA
-    ══════════════════════════════ */
-    .closing {
-      padding: 96px 0;
-      text-align: center;
-    }
-    .closing h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(40px, 6vw, 68px);
-      line-height: 1.1;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      margin-bottom: 20px;
-    }
-    .closing p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--ink-light);
-      max-width: 380px;
-      margin: 0 auto 40px;
-    }
-
-    /* ══════════════════════════════
-       FOOTER
-    ══════════════════════════════ */
-    .site-footer {
-      border-top: 1px solid var(--rule);
-      padding: 24px 0;
-    }
-    .site-footer .container {
+      color: #555;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: 12px;
     }
+    .quote-attr::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: #555;
+    }
+    .quote-attr::after {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: #555;
+    }
+
+    /* ══ CLOSING ══ */
+    .closing { padding: 96px 0; text-align: center; }
+    .closing h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 6vw, 68px); line-height: 1.1;
+      font-weight: 400; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 20px;
+    }
+    .closing p { font-size: 16px; line-height: 1.7; color: var(--ink-light); max-width: 560px; margin: 0 auto 40px; }
+
+    /* ══ FOOTER ══ */
+    .site-footer { border-top: 1px solid var(--rule); padding: 24px 0; }
+    .site-footer .container { display: flex; flex-direction: column; align-items: center; gap: 12px; }
     .footer-copy { font-size: 12px; color: #aaa; }
     .footer-links { display: flex; gap: 28px; }
-    .footer-links a {
-      font-size: 13px;
-      color: var(--ink-light);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
+    .footer-links a { font-size: 13px; color: var(--ink-light); text-decoration: none; transition: color 0.15s; }
     .footer-links a:hover { color: var(--ink); }
-
     @media (min-width: 600px) {
-      .site-footer .container {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+      .site-footer .container { flex-direction: row; justify-content: space-between; }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; animation: none !important; }
-    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
   </style>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
-  <header class="site-nav">
-    <div class="container">
-      <div class="nav-left">
-        <div class="nav-icon">
-          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <!-- vertical beam -->
-            <rect x="13.5" y="4" width="5" height="24" rx="1" fill="white"/>
-            <!-- horizontal beam, higher up like a traditional cross -->
-            <rect x="6" y="10" width="20" height="5" rx="1" fill="white"/>
-          </svg>
-        </div>
-        <span class="nav-brand">Bible Study</span>
+<!-- ══ SVG ICON DEFS (reusable) ══ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <defs>
+    <!-- CROSS (nav) -->
+    <symbol id="icon-cross" viewBox="0 0 24 24">
+      <rect x="10.5" y="2" width="3" height="20" rx="0.75" fill="white"/>
+      <rect x="3" y="7.5" width="18" height="3" rx="0.75" fill="white"/>
+    </symbol>
+
+    <!-- BIBLE (Sunday Readings) -->
+    <symbol id="icon-bible" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="2" width="14" height="19" rx="2"/>
+      <path d="M4 19.5A2.5 2.5 0 016.5 17H18"/>
+      <path d="M4 2.5A2.5 2.5 0 016.5 5H18"/>
+      <!-- cross on book -->
+      <line x1="11" y1="8" x2="11" y2="14"/>
+      <line x1="8" y1="11" x2="14" y2="11"/>
+    </symbol>
+
+    <!-- CHURCH (Mass Mode) -->
+    <symbol id="icon-church" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <!-- cross on top -->
+      <line x1="12" y1="1" x2="12" y2="5"/>
+      <line x1="10" y1="3" x2="14" y2="3"/>
+      <!-- roof -->
+      <polyline points="3,11 12,5 21,11"/>
+      <!-- walls -->
+      <line x1="3" y1="11" x2="3" y2="21"/>
+      <line x1="21" y1="11" x2="21" y2="21"/>
+      <line x1="3" y1="21" x2="21" y2="21"/>
+      <!-- door arch -->
+      <path d="M9 21v-6a3 3 0 016 0v6"/>
+      <!-- rose window -->
+      <circle cx="12" cy="13" r="2"/>
+    </symbol>
+
+    <!-- DOVE (Formation) — from uploaded dove.svg -->
+    <symbol id="icon-dove" viewBox="0 0 682.667 682.667" fill="none" stroke="currentColor" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter">
+      <g transform="matrix(1.33333 0 0 -1.33333 0 682.667)">
+        <path d="M0 0h45" transform="translate(467 302)"/>
+        <path d="m0 0-1.508-.725C-26.023 63.382-87.879 106.962-158.09 106.962h-138.63c0-101.147 78.706-184.83 179.662-191.025l38.575-2.368s-85.029-84.774-218.237-84.774c0 0 0-113.833 94.823-113.833l91.539 76.011S155.28-300.038 155.28-52.92v69.882c0 33.137-26.863 60-60 60-24.162 0-44.989-14.282-54.498-34.866C32.328 23.796 18.168 8.735 0 0Z" transform="translate(311.72 300.038)"/>
+        <path d="M0 0c-14.346 26.879-22.452 57.54-22.452 90h108.63c73.733 0 138.251-48.062 159.986-117.485 3.393-10.838 7.383-21.478 11.731-31.969" transform="translate(97.452 407)"/>
+        <path d="M0 0h30" transform="translate(392 302)"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ══ NAV ══ -->
+<header class="site-nav">
+  <div class="container">
+    <div class="nav-left">
+      <div class="nav-icon">
+        <svg viewBox="0 0 24 24"><use href="#icon-cross"/></svg>
       </div>
-      <ul class="nav-links">
-        <li><a href="#">Readings</a></li>
-        <li><a href="#">Mass Mode</a></li>
-        <li><a href="#">Formation</a></li>
-      </ul>
-      <a href="#" class="nav-cta">Start exploring</a>
+      <span class="nav-brand">Bible Study</span>
     </div>
-  </header>
+    <ul class="nav-links">
+      <li><a href="#">Readings</a></li>
+      <li><a href="#">Mass Mode</a></li>
+      <li><a href="#">Formation</a></li>
+    </ul>
+    <a href="#" class="nav-cta">Start exploring</a>
+  </div>
+</header>
 
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <p class="eyebrow">Catholic Pocket Companion</p>
-        <h1 class="hero-headline">Your faith,<br><em>always</em><br>within reach.</h1>
-        <p class="hero-body">Sunday readings, Mass guidance, and faith formation — thoughtfully designed for anyone drawn to the Catholic tradition.</p>
-        <a href="#" class="cta-btn">Start exploring</a>
-      </div>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="eyebrow">Catholic Pocket Companion</p>
+      <h1 class="hero-headline">Your faith,<br><em>always</em><br>within reach.</h1>
+      <p class="hero-body">Sunday readings, Mass guidance, and faith formation — thoughtfully designed for anyone drawn to the Catholic tradition.</p>
+      <a href="#" class="cta-btn">Start exploring</a>
+    </div>
 
-      <!-- Phone mockup shown only on desktop (inside hero) -->
-      <div class="hero-mockup">
-        <div class="phone-frame">
-          <div class="phone-notch-bar">
-            <span>9:41</span>
-            <div class="phone-notch-icons"><span>▲▲▲</span><span>WiFi</span><span>🔋</span></div>
+    <!-- Phone mockup (desktop only) -->
+    <div class="hero-mockup">
+      <div class="phone-frame">
+        <div class="phone-status-bar">
+          <span class="time">9:41</span>
+          <div class="icons">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><path d="M1 6s4-4 11-4 11 4 11 4"/><path d="M5 10s2.5-2.5 7-2.5S19 10 19 10"/><path d="M9 14s1.5-1.5 3-1.5 3 1.5 3 1.5"/><circle cx="12" cy="18" r="1" fill="#111"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="18" height="11" rx="2"/><path d="M22 11v3" stroke-width="3" stroke-linecap="round"/></svg>
           </div>
-          <div class="phone-body">
+        </div>
+        <div class="phone-scroll">
+          <div class="phone-header">
             <div class="ph-date">Sunday, June 14</div>
             <div class="ph-title">Twenty-Third Sunday<br>in Ordinary Time</div>
-            <div class="ph-season">Ordinary Time</div>
-            <div class="ph-card">
-              <div class="ph-label">Theme of the Week</div>
-              <div class="ph-card-title">Choosing what truly lasts</div>
-              <div class="ph-card-body">This week the readings invite us to weigh our choices honestly and to set our hearts on the things that endure rather than the things that pass away.</div>
-            </div>
-            <div class="ph-readings-link">📖 This Sunday's readings</div>
-            <div class="ph-first-reading">
+            <div class="ph-season-pill">Ordinary Time</div>
+          </div>
+          <div class="ph-card">
+            <div class="ph-label">Theme of the Week</div>
+            <div class="ph-card-title">Choosing what truly lasts</div>
+            <div class="ph-card-body">This week the readings invite us to weigh our choices honestly and to set our hearts on the things that endure rather than the things that pass away.</div>
+          </div>
+          <div class="ph-readings-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><use href="#icon-bible"/></svg>
+            This Sunday's readings
+          </div>
+          <div class="ph-reading-item">
+            <div class="ph-reading-item-left">
               <div class="ph-label">First Reading</div>
               <div class="ph-card-title">Wisdom 9:13-18</div>
             </div>
+            <span class="ph-reading-chevron">›</span>
+          </div>
+          <div class="ph-reading-item">
+            <div class="ph-reading-item-left">
+              <div class="ph-label">Responsorial Psalm</div>
+              <div class="ph-card-title">Psalm 90</div>
+            </div>
+            <span class="ph-reading-chevron">›</span>
+          </div>
+          <div class="ph-reading-item">
+            <div class="ph-reading-item-left">
+              <div class="ph-label">Second Reading</div>
+              <div class="ph-card-title">Philemon 9-17</div>
+            </div>
+            <span class="ph-reading-chevron">›</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PHONE MOCKUP BAND (mobile / tablet only) ── -->
-  <div class="mockup-band">
-    <div class="phone-frame">
-      <div class="phone-notch-bar">
-        <span>9:41</span>
-        <div class="phone-notch-icons"><span>▲▲▲</span><span>WiFi</span><span>🔋</span></div>
-      </div>
-      <div class="phone-body">
-        <div class="ph-date">Sunday, June 14</div>
-        <div class="ph-title">Twenty-Third Sunday<br>in Ordinary Time</div>
-        <div class="ph-season">Ordinary Time</div>
-        <div class="ph-card">
-          <div class="ph-label">Theme of the Week</div>
-          <div class="ph-card-title">Choosing what truly lasts</div>
-          <div class="ph-card-body">This week the readings invite us to weigh our choices honestly and to set our hearts on the things that endure rather than the things that pass away.</div>
-        </div>
-        <div class="ph-readings-link">📖 This Sunday's readings</div>
-        <div class="ph-first-reading">
-          <div class="ph-label">First Reading</div>
-          <div class="ph-card-title">Wisdom 9:13-18</div>
+        <div class="phone-bottom-nav">
+          <div class="ph-nav-item active">
+            <svg viewBox="0 0 24 24"><use href="#icon-bible"/></svg>
+            Readings
+          </div>
+          <div class="ph-nav-item">
+            <svg viewBox="0 0 24 24"><use href="#icon-church"/></svg>
+            Mass Mode
+          </div>
+          <div class="ph-nav-item">
+            <svg viewBox="0 0 24 24"><use href="#icon-dove"/></svg>
+            Formation
+          </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── FEATURES ── -->
-  <section class="features">
-    <div class="container">
-      <div class="features-grid">
-
-        <div class="feature">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <path d="M3 9h18M9 21V9"/>
-            </svg>
-          </div>
-          <div class="feature-text">
-            <h3>Sunday Readings</h3>
-            <p>See this week's Mass readings at a glance. Dive deeper into Scripture, themes, and context whenever you're ready.</p>
-          </div>
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <div class="feature-text">
-            <h3>Mass Mode</h3>
-            <p>Follow along at Mass with real-time guidance through the Order of the Mass. Perfect for newcomers and seasoned Catholics alike.</p>
-          </div>
-        </div>
-
-        <div class="feature">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <div class="feature-text">
-            <h3>Formation</h3>
-            <p>Learn the faith at your own pace — the Creed, the sacraments, the saints, and the story of the Church, one step at a time.</p>
-          </div>
-        </div>
-
+<!-- ══ MOCKUP BAND (mobile / tablet only) ══ -->
+<div class="mockup-band">
+  <div class="phone-frame">
+    <div class="phone-status-bar">
+      <span class="time">9:41</span>
+      <div class="icons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><path d="M1 6s4-4 11-4 11 4 11 4"/><path d="M5 10s2.5-2.5 7-2.5S19 10 19 10"/><path d="M9 14s1.5-1.5 3-1.5 3 1.5 3 1.5"/><circle cx="12" cy="18" r="1" fill="#111"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="18" height="11" rx="2"/><path d="M22 11v3" stroke-width="3" stroke-linecap="round"/></svg>
       </div>
     </div>
-  </section>
-
-  <!-- ── QUOTE ── -->
-  <section class="quote-section">
-    <div class="container">
-      <div class="quote-inner">
-        <span class="quote-mark">"</span>
-        <p class="quote-text">"Come and see."</p>
-        <p class="quote-attr">John 1:39 — An invitation to everyone.</p>
+    <div class="phone-scroll">
+      <div class="phone-header">
+        <div class="ph-date">Sunday, June 14</div>
+        <div class="ph-title">Twenty-Third Sunday<br>in Ordinary Time</div>
+        <div class="ph-season-pill">Ordinary Time</div>
+      </div>
+      <div class="ph-card">
+        <div class="ph-label">Theme of the Week</div>
+        <div class="ph-card-title">Choosing what truly lasts</div>
+        <div class="ph-card-body">This week the readings invite us to weigh our choices honestly and to set our hearts on the things that endure rather than the things that pass away.</div>
+      </div>
+      <div class="ph-readings-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><use href="#icon-bible"/></svg>
+        This Sunday's readings
+      </div>
+      <div class="ph-reading-item">
+        <div class="ph-reading-item-left">
+          <div class="ph-label">First Reading</div>
+          <div class="ph-card-title">Wisdom 9:13-18</div>
+        </div>
+        <span class="ph-reading-chevron">›</span>
+      </div>
+      <div class="ph-reading-item">
+        <div class="ph-reading-item-left">
+          <div class="ph-label">Responsorial Psalm</div>
+          <div class="ph-card-title">Psalm 90</div>
+        </div>
+        <span class="ph-reading-chevron">›</span>
+      </div>
+      <div class="ph-reading-item">
+        <div class="ph-reading-item-left">
+          <div class="ph-label">Second Reading</div>
+          <div class="ph-card-title">Philemon 9-17</div>
+        </div>
+        <span class="ph-reading-chevron">›</span>
       </div>
     </div>
-  </section>
-
-  <!-- ── CLOSING ── -->
-  <section class="closing">
-    <div class="container">
-      <h2>Start wherever<br>you are.</h2>
-      <p>No background required. No pressure. Just an open door into the Catholic faith — on your terms, at your pace.</p>
-      <a href="#" class="cta-btn">Start exploring</a>
+    <div class="phone-bottom-nav">
+      <div class="ph-nav-item active">
+        <svg viewBox="0 0 24 24"><use href="#icon-bible"/></svg>
+        Readings
+      </div>
+      <div class="ph-nav-item">
+        <svg viewBox="0 0 24 24"><use href="#icon-church"/></svg>
+        Mass Mode
+      </div>
+      <div class="ph-nav-item">
+        <svg viewBox="0 0 24 24"><use href="#icon-dove"/></svg>
+        Formation
+      </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- ── FOOTER ── -->
-  <footer class="site-footer">
-    <div class="container">
-      <p class="footer-copy">© 2026 Bible Study</p>
-      <nav class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Contact</a>
-        <a href="#">Feedback</a>
-      </nav>
+<!-- ══ FEATURES ══ -->
+<section class="features">
+  <div class="container">
+    <div class="features-grid">
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><use href="#icon-bible"/></svg>
+        </div>
+        <div class="feature-text">
+          <h3>Sunday Readings</h3>
+          <p>See this week's Mass readings at a glance. Dive deeper into Scripture, themes, and context whenever you're ready.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><use href="#icon-church"/></svg>
+        </div>
+        <div class="feature-text">
+          <h3>Mass Mode</h3>
+          <p>Follow along at Mass with real-time guidance through the Order of the Mass. Perfect for newcomers and seasoned Catholics alike.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><use href="#icon-dove"/></svg>
+        </div>
+        <div class="feature-text">
+          <h3>Formation</h3>
+          <p>Learn the faith at your own pace — the Creed, the sacraments, the saints, and the story of the Church, one step at a time.</p>
+        </div>
+      </div>
+
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- ══ QUOTE ══ -->
+<section class="quote-section">
+  <div class="container">
+    <div class="quote-bg-mark">&#x201C;</div>
+    <div class="quote-inner">
+      <p class="quote-text">Come and see.</p>
+      <p class="quote-attr">John 1:39 — An invitation to everyone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLOSING ══ -->
+<section class="closing">
+  <div class="container">
+    <h2>Start wherever you are.</h2>
+    <p>No background required. No pressure.<br>Just an open door into the Catholic faith — on your terms, at your pace.</p>
+    <a href="#" class="cta-btn">Start exploring</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-copy">© 2026 Bible Study</p>
+    <nav class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Contact</a>
+      <a href="#">Feedback</a>
+    </nav>
+  </div>
+</footer>
 
 </body>
 </html>
