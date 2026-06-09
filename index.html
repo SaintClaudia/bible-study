@@ -232,9 +232,10 @@
     }
 
     /* ══ FEATURES ══ */
-    .features { padding: 72px 0; border-top: 1px solid var(--rule); }
+    .features { padding: 40px 0 72px; border-top: none; }
     .features-grid { display: grid; grid-template-columns: 1fr; gap: 44px; }
     .feature { display: flex; gap: 20px; align-items: flex-start; }
+    .feature:last-child { margin-bottom: 16px; }
     .feature-icon {
       width: 48px; height: 48px; flex-shrink: 0;
       background: var(--off-white); border-radius: 12px;
