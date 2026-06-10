@@ -711,7 +711,7 @@
   const nav = document.querySelector('.site-nav')
   window.addEventListener('scroll', () => {
     const current = window.scrollY
-    if (current > lastScroll && current > 80) {
+    if (current > lastScroll && current > 400) {
       nav.classList.add('nav-hidden')
     } else {
       nav.classList.remove('nav-hidden')
