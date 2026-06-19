@@ -681,29 +681,50 @@
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal() })
 
-  // Contact form — opens mailto to iCloud silently
-  function handleContact(e) {
+  async function handleContact(e) {
     e.preventDefault()
-    const name = document.getElementById('contact-name').value
-    const email = document.getElementById('contact-email').value
-    const msg = document.getElementById('contact-msg').value
-    const subject = encodeURIComponent('Bible Study — Message from ' + name)
-    const body = encodeURIComponent('From: ' + name + '\nReply to: ' + email + '\n\n' + msg)
-    window.location.href = 'mailto:claudiajochoa@icloud.com?subject=' + subject + '&body=' + body
-    document.getElementById('contact-thanks').style.display = 'block'
-    e.target.style.display = 'none'
+    const btn = e.target.querySelector('button[type="submit"]')
+    btn.textContent = 'Sending…'
+    btn.disabled = true
+    const data = new FormData()
+    data.append('access_key', '3813aee3-e274-44d3-9ed0-ad9beeb0b5d0')
+    data.append('subject', 'New message from Bible Study Contact Modal')
+    data.append('name', document.getElementById('contact-name').value)
+    data.append('email', document.getElementById('contact-email').value)
+    data.append('message', document.getElementById('contact-msg').value)
+    const res = await fetch('https://api.web3forms.com/submit', {method:'POST', body: data})
+    const json = await res.json()
+    if (json.success) {
+      e.target.style.display = 'none'
+      document.getElementById('contact-thanks').style.display = 'block'
+    } else {
+      btn.textContent = 'Send message'
+      btn.disabled = false
+      alert('Something went wrong. Please try again.')
+    }
   }
 
-  // Feedback form — same approach
-  function handleFeedback(e) {
+  async function handleFeedback(e) {
     e.preventDefault()
-    const msg = document.getElementById('feedback-msg').value
+    const btn = e.target.querySelector('button[type="submit"]')
+    btn.textContent = 'Sending…'
+    btn.disabled = true
+    const data = new FormData()
+    data.append('access_key', '3813aee3-e274-44d3-9ed0-ad9beeb0b5d0')
+    data.append('subject', 'New feedback from Bible Study Feedback Modal')
+    data.append('message', document.getElementById('feedback-msg').value)
     const replyEmail = document.getElementById('feedback-email').value
-    const subject = encodeURIComponent('Bible Study — Feedback')
-    const body = encodeURIComponent(msg + (replyEmail ? '\n\nReply to: ' + replyEmail : ''))
-    window.location.href = 'mailto:claudiajochoa@icloud.com?subject=' + subject + '&body=' + body
-    document.getElementById('feedback-thanks').style.display = 'block'
-    e.target.style.display = 'none'
+    if (replyEmail) data.append('email', replyEmail)
+    const res = await fetch('https://api.web3forms.com/submit', {method:'POST', body: data})
+    const json = await res.json()
+    if (json.success) {
+      e.target.style.display = 'none'
+      document.getElementById('feedback-thanks').style.display = 'block'
+    } else {
+      btn.textContent = 'Send feedback'
+      btn.disabled = false
+      alert('Something went wrong. Please try again.')
+    }
   }
 
   // ── Hide nav on scroll down, show on scroll up ──
