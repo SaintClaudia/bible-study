@@ -4,11 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bible Study — Catholic Pocket Companion</title>
+  <meta name="description" content="Sunday readings, Mass guidance, and faith formation — thoughtfully designed for anyone drawn to the Catholic tradition."/>
+  <link rel="canonical" href="https://biblestudylovesyou.com/"/>
+  <meta name="robots" content="index, follow"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://biblestudylovesyou.com/"/>
+  <meta property="og:title" content="Bible Study — Catholic Pocket Companion"/>
+  <meta property="og:description" content="Sunday readings, Mass guidance, and faith formation — thoughtfully designed for anyone drawn to the Catholic tradition."/>
+  <meta property="og:image" content="https://biblestudylovesyou.com/apple-touch-icon.png"/>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Bible Study — Catholic Pocket Companion"/>
+  <meta name="twitter:description" content="Sunday readings, Mass guidance, and faith formation — thoughtfully designed for anyone drawn to the Catholic tradition."/>
+  <meta name="twitter:image" content="https://biblestudylovesyou.com/apple-touch-icon.png"/>
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"/>
   <meta name="theme-color" content="#1a1a18" media="(prefers-color-scheme: dark)"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a1a18'/><rect x='14.5' y='4' width='3' height='24' rx='1' fill='white'/><rect x='6' y='10.5' width='20' height='3' rx='1' fill='white'/></svg>" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Bible Study","url":"https://biblestudylovesyou.com","description":"Sunday readings, Mass guidance, and faith formation — thoughtfully designed for anyone drawn to the Catholic tradition.","potentialAction":{"@type":"ViewAction","target":"https://app.biblestudylovesyou.com"}}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -379,6 +396,7 @@
   </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ══ SVG ICON DEFS (reusable) ══ -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -447,7 +465,7 @@
 </header>
 
 <!-- ══ HERO ══ -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="container">
     <div class="hero-content">
       <p class="eyebrow">Catholic Pocket Companion</p>
@@ -457,7 +475,7 @@
     </div>
 
     <!-- Phone mockup (desktop only) -->
-    <div class="hero-mockup">
+    <div class="hero-mockup" aria-hidden="true">
       <div class="phone-frame" id="phone-desktop">
         <div class="phone-status-bar">
           <span class="time">9:41</span>
@@ -514,6 +532,7 @@
 <!-- ══ FEATURES ══ -->
 <section class="features">
   <div class="container">
+    <h2 class="sr-only">Features</h2>
     <div class="features-grid">
 
       <div class="feature">
@@ -583,30 +602,35 @@
 </footer>
 
 <!-- ══ MODALS ══ -->
-<div id="modal-overlay" onclick="closeModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;backdrop-filter:blur(4px);transition:opacity 0.2s"></div>
+<div id="modal-overlay" onclick="closeModal()" aria-hidden="true" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;backdrop-filter:blur(4px);transition:opacity 0.2s"></div>
 
-<div id="modal-privacy" class="modal-sheet" style="display:none">
-  <div class="modal-header"><h2 class="modal-title">Privacy</h2><button onclick="closeModal()" class="modal-close">✕</button></div>
+<div id="modal-privacy" class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-privacy-title" style="display:none">
+  <div class="modal-header"><h2 class="modal-title" id="modal-privacy-title">Privacy</h2><button onclick="closeModal()" class="modal-close" aria-label="Close">✕</button></div>
   <p class="modal-body">Bible Study does not collect any personal information. The app runs entirely in your browser. Any progress you save is stored locally on your device and never transmitted to us. We use Google Fonts to serve typefaces. Daily readings are fetched from a free open-source API — no personal data is sent as part of these requests.</p>
 </div>
 
-<div id="modal-contact" class="modal-sheet" style="display:none">
-  <div class="modal-header"><h2 class="modal-title">Get in touch.</h2><button onclick="closeModal()" class="modal-close">✕</button></div>
+<div id="modal-contact" class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-contact-title" style="display:none">
+  <div class="modal-header"><h2 class="modal-title" id="modal-contact-title">Get in touch.</h2><button onclick="closeModal()" class="modal-close" aria-label="Close">✕</button></div>
   <p class="modal-body" style="margin-bottom:20px">Have a question or just want to say hello? We'd love to hear from you.</p>
   <form onsubmit="handleContact(event)" style="display:flex;flex-direction:column;gap:12px">
+    <label for="contact-name" class="sr-only">Name</label>
     <input id="contact-name" type="text" placeholder="Your name" required style="border:1px solid var(--rule);border-radius:8px;padding:12px 14px;font-family:inherit;font-size:14px;background:var(--off-white);color:var(--ink);outline:none"/>
+    <label for="contact-email" class="sr-only">Email</label>
     <input id="contact-email" type="email" placeholder="Your email" required style="border:1px solid var(--rule);border-radius:8px;padding:12px 14px;font-family:inherit;font-size:14px;background:var(--off-white);color:var(--ink);outline:none"/>
+    <label for="contact-msg" class="sr-only">Message</label>
     <textarea id="contact-msg" placeholder="Your message" rows="4" required style="border:1px solid var(--rule);border-radius:8px;padding:12px 14px;font-family:inherit;font-size:14px;background:var(--off-white);color:var(--ink);outline:none;resize:vertical"></textarea>
     <button type="submit" class="cta-btn" style="width:100%;text-align:center">Send message</button>
   </form>
   <p id="contact-thanks" style="display:none;margin-top:16px;font-size:14px;color:var(--ink-light);text-align:center">We received your message and will get back to you within a few days.</p>
 </div>
 
-<div id="modal-feedback" class="modal-sheet" style="display:none">
-  <div class="modal-header"><h2 class="modal-title">Share your feedback.</h2><button onclick="closeModal()" class="modal-close">✕</button></div>
+<div id="modal-feedback" class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-feedback-title" style="display:none">
+  <div class="modal-header"><h2 class="modal-title" id="modal-feedback-title">Share your feedback.</h2><button onclick="closeModal()" class="modal-close" aria-label="Close">✕</button></div>
   <p class="modal-body" style="margin-bottom:20px">Bible Study is an MVP. Your thoughts directly shape what we build next — big or small, it all helps.</p>
   <form onsubmit="handleFeedback(event)" style="display:flex;flex-direction:column;gap:12px">
+    <label for="feedback-msg" class="sr-only">Feedback</label>
     <textarea id="feedback-msg" placeholder="What's working? What's missing? What do you wish existed?" rows="5" required style="border:1px solid var(--rule);border-radius:8px;padding:12px 14px;font-family:inherit;font-size:14px;background:var(--off-white);color:var(--ink);outline:none;resize:vertical"></textarea>
+    <label for="feedback-email" class="sr-only">Email (optional)</label>
     <input id="feedback-email" type="email" placeholder="Your email (optional — if you'd like a reply)" style="border:1px solid var(--rule);border-radius:8px;padding:12px 14px;font-family:inherit;font-size:14px;background:var(--off-white);color:var(--ink);outline:none"/>
     <button type="submit" class="cta-btn" style="width:100%;text-align:center">Send feedback</button>
   </form>
@@ -665,19 +689,28 @@
   }
   .modal-close:hover { background: var(--off-white); }
   .modal-body { font-size: 14px; line-height: 1.7; color: var(--ink-light); }
+  .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+  .skip-link { position:absolute;top:-100%;left:0;padding:8px 16px;background:var(--ink);color:var(--white);font-size:14px;font-weight:500;z-index:9999;border-radius:0 0 8px 0; }
+  .skip-link:focus { top:0; }
 </style>
 
 <script>
   // ── Modal system ──
+  let _modalOpener = null
   function openModal(id) {
+    _modalOpener = document.activeElement
     document.getElementById('modal-overlay').style.display = 'block'
-    document.getElementById('modal-' + id).style.display = 'block'
+    const modal = document.getElementById('modal-' + id)
+    modal.style.display = 'block'
     document.body.style.overflow = 'hidden'
+    const focusable = modal.querySelector('button, input, textarea, [href]')
+    if (focusable) focusable.focus()
   }
   function closeModal() {
     document.querySelectorAll('.modal-sheet').forEach(m => m.style.display = 'none')
     document.getElementById('modal-overlay').style.display = 'none'
     document.body.style.overflow = ''
+    if (_modalOpener) { _modalOpener.focus(); _modalOpener = null }
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal() })
 
