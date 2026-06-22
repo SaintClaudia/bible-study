@@ -254,12 +254,13 @@
       1%   { visibility: visible; transform: translateY(10px); }
       to   { visibility: visible; transform: translateY(0); }
     }
-    .ph-anim-1  { animation-delay: 0.3s; }
-    .ph-anim-2  { animation-delay: 0.7s; }
-    .ph-anim-3  { animation-delay: 1.1s; }
-    .ph-anim-4  { animation-delay: 1.5s; }
-    .ph-anim-5  { animation-delay: 1.9s; }
-    .ph-anim-6  { animation-delay: 2.3s; }
+    .ph-anim-1  { animation-delay: 0.1s; }
+    .ph-anim-2  { animation-delay: 0.25s; }
+    .ph-anim-3  { animation-delay: 0.4s; }
+    .ph-anim-4  { animation-delay: 0.55s; }
+    .ph-anim-5  { animation-delay: 0.7s; }
+    .ph-anim-6  { animation-delay: 0.85s; }
+    .ph-anim-7  { animation-delay: 1.0s; }
 
 
 
@@ -398,8 +399,8 @@
   <defs>
     <!-- CROSS (nav) -->
     <symbol id="icon-cross" viewBox="0 0 24 24">
-      <rect x="10.5" y="2" width="3" height="20" rx="0.75" fill="white"/>
-      <rect x="3" y="7.5" width="18" height="3" rx="0.75" fill="white"/>
+      <rect x="10.5" y="1.5" width="3" height="21" rx="0.75" fill="white"/>
+      <rect x="4" y="6" width="16" height="2.8" rx="0.75" fill="white"/>
     </symbol>
 
     <!-- BIBLE (Sunday Readings) -->
@@ -486,54 +487,98 @@
 
     <!-- Phone mockup (desktop only) -->
     <div class="hero-mockup" aria-hidden="true">
-      <div class="phone-frame" id="phone-desktop">
-        <div class="phone-status-bar">
-          <span class="time">9:41</span>
+      <div class="phone-frame" id="phone-desktop" style="background:#f3ede8">
+        <div class="phone-status-bar" style="background:#f3ede8">
+          <span class="time">7:22</span>
           <div class="icons">
             <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><path d="M1 6s4-4 11-4 11 4 11 4"/><path d="M5 10s2.5-2.5 7-2.5S19 10 19 10"/><path d="M9 14s1.5-1.5 3-1.5 3 1.5 3 1.5"/><circle cx="12" cy="18" r="1" fill="#111"/></svg>
             <svg viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="18" height="11" rx="2"/><path d="M22 11v3" stroke-width="3" stroke-linecap="round"/></svg>
           </div>
         </div>
-        <div class="phone-screen-content" id="mass-screen-desktop">
-          <div class="ph-anim ph-anim-1" style="padding:14px 20px 0">
-            <div class="ph-label" style="margin-bottom:6px">Church Mode &middot; Step 1 of 8</div>
-            <div style="height:3px;background:#ebebeb;border-radius:2px;overflow:hidden">
-              <div style="width:12.5%;height:100%;background:#1a1a18;border-radius:2px"></div>
+        <div class="phone-screen-content" id="guide-screen-desktop" style="background:#f3ede8">
+          <div style="background:#f3ede8;display:flex;flex-direction:column">
+            <!-- toolbar -->
+            <div class="ph-anim ph-anim-1" style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px 4px">
+              <div style="width:36px;height:36px;background:#1a1a18;border-radius:10px;display:flex;align-items:center;justify-content:center">
+                <svg width="16" height="16" viewBox="0 0 24 24"><use href="#icon-cross"/></svg>
+              </div>
+              <div style="width:36px;height:36px;background:rgba(0,0,0,0.09);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              </div>
             </div>
-          </div>
-          <div class="ph-anim ph-anim-2" style="padding:14px 20px 4px">
-            <div style="display:inline-flex;align-items:center;gap:6px;background:#f0efec;border-radius:20px;padding:5px 14px;font-size:9px;font-family:Inter,sans-serif;color:#555">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="11" height="11"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
-              Stand
+            <!-- big heading -->
+            <div class="ph-anim ph-anim-2" style="padding:62px 16px 0">
+              <div style="font-family:'Playfair Display',serif;font-size:40px;line-height:1.08;font-weight:400;color:#1a1a18">Your guide<br>to OCIA</div>
             </div>
-          </div>
-          <div class="ph-anim ph-anim-3" style="padding:4px 20px 10px">
-            <div class="ph-title">Introductory Rites</div>
-          </div>
-          <div class="ph-anim ph-anim-4" style="padding:0 20px 14px;font-size:11px;line-height:1.65;color:#666;font-family:Inter,sans-serif">
-            The priest enters and everyone makes the Sign of the Cross. We pause to admit our faults, ask for mercy, and often sing the Gloria, a hymn of praise.
-          </div>
-          <div class="ph-anim ph-anim-5 ph-card" style="margin-bottom:10px">
-            <div class="ph-label" style="display:flex;align-items:center;gap:5px;margin-bottom:8px">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="10" height="10"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              Common Responses
+            <!-- subtitle -->
+            <div class="ph-anim ph-anim-3" style="padding:12px 16px 0;font-size:12px;line-height:1.6;color:#777;font-family:'Inter',sans-serif">
+              From what to expect to what you need to know about OCIA.
             </div>
-            <div style="font-size:10px;color:#666;font-family:Inter,sans-serif;margin-bottom:2px">The Lord be with you.</div>
-            <div style="font-size:10px;font-weight:700;color:#1a1a18;font-family:Inter,sans-serif;margin-bottom:8px">And with your spirit.</div>
-            <div style="font-size:10px;color:#666;font-family:Inter,sans-serif;margin-bottom:2px">I confess to almighty God&hellip;</div>
-            <div style="font-size:10px;font-weight:700;color:#1a1a18;font-family:Inter,sans-serif">&hellip;through my fault, through my most grievous fault.</div>
-          </div>
-          <div class="ph-anim ph-anim-6" style="margin:0 16px 16px;border:1px solid #ebebeb;border-radius:20px;padding:10px 14px;display:flex;align-items:center;gap:8px;font-size:10px;font-family:Inter,sans-serif;color:#666">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="12" height="12"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-            Why do Catholics do this?
+            <!-- QUICK ANSWERS label -->
+            <div class="ph-anim ph-anim-4" style="padding:18px 16px 8px;font-size:8.5px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#888;font-family:'Inter',sans-serif">
+              Quick Answers
+            </div>
+            <!-- cards row -->
+            <div class="ph-anim ph-anim-5" style="padding:0 16px;display:flex;gap:8px">
+              <div style="flex:1;background:#fff;border-radius:14px;padding:12px 10px;min-width:0">
+                <div style="font-size:8px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#888;font-family:'Inter',sans-serif;margin-bottom:6px">Cost</div>
+                <div style="font-family:'Playfair Display',serif;font-size:13px;color:#1a1a18;line-height:1.3;margin-bottom:8px">Does it cost anything?</div>
+                <div style="font-size:9px;color:#555;font-family:'Inter',sans-serif">No, it's free &rarr;</div>
+              </div>
+              <div style="flex:1;background:#fff;border-radius:14px;padding:12px 10px;min-width:0">
+                <div style="font-size:8px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#888;font-family:'Inter',sans-serif;margin-bottom:6px">Commitment</div>
+                <div style="font-family:'Playfair Display',serif;font-size:13px;color:#1a1a18;line-height:1.3;margin-bottom:8px">Do I have to become Catholic?</div>
+                <div style="font-size:9px;color:#555;font-family:'Inter',sans-serif">No commitment &rarr;</div>
+              </div>
+            </div>
+            <!-- START HERE label -->
+            <div class="ph-anim ph-anim-6" style="padding:18px 16px 8px;font-size:8.5px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#888;font-family:'Inter',sans-serif">
+              Start Here
+            </div>
+            <!-- start here content matching app design -->
+            <div class="ph-anim ph-anim-7" style="padding:0 16px;display:flex;flex-direction:column;gap:8px">
+              <!-- dark featured card -->
+              <div style="background:#1a1a18;border-radius:14px;padding:12px 12px 14px;position:relative">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px">
+                  <div style="font-size:8px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.55);font-family:'Inter',sans-serif">What to Expect</div>
+                  <div style="width:22px;height:22px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1a1a18" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </div>
+                </div>
+                <div style="font-family:'Playfair Display',serif;font-size:16px;line-height:1.2;color:#fff;margin-bottom:6px">What actually happens at OCIA?</div>
+                <div style="font-size:9px;color:rgba(255,255,255,0.6);font-family:'Inter',sans-serif">A weekly conversation, not a test.</div>
+              </div>
+              <!-- two image cards -->
+              <div style="display:flex;gap:8px">
+                <div style="flex:1;background:#fff;border-radius:14px;overflow:hidden;min-width:0">
+                  <div style="height:52px;background:linear-gradient(135deg,#3d5a38 0%,#7a6030 50%,#c49a3c 100%)"></div>
+                  <div style="padding:8px 10px 10px">
+                    <div style="font-family:'Playfair Display',serif;font-size:11px;color:#1a1a18;line-height:1.3;margin-bottom:3px">What's a typical session like?</div>
+                    <div style="font-size:8px;color:#888;font-family:'Inter',sans-serif">Topic, talk, prayer.</div>
+                  </div>
+                </div>
+                <div style="flex:1;background:#fff;border-radius:14px;overflow:hidden;min-width:0">
+                  <div style="height:52px;background:linear-gradient(135deg,#5a2020 0%,#b03030 50%,#d4802a 100%)"></div>
+                  <div style="padding:8px 10px 10px">
+                    <div style="font-family:'Playfair Display',serif;font-size:11px;color:#1a1a18;line-height:1.3;margin-bottom:3px">The journey, step by step</div>
+                    <div style="font-size:8px;color:#888;font-family:'Inter',sans-serif">From curiosity to the sacraments.</div>
+                  </div>
+                </div>
+              </div>
+              <!-- good to know -->
+              <div style="padding:6px 0 2px;font-size:8.5px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#888;font-family:'Inter',sans-serif">Good to Know</div>
+              <div style="background:#fff;border-radius:14px;padding:12px 12px">
+                <div style="font-family:'Playfair Display',serif;font-size:12px;color:#1a1a18;line-height:1.4">The things people quietly assume you already know.</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="phone-bottom-nav">
-          <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-compass"/></svg>Journey</div>
-          <div class="ph-nav-item active"><svg viewBox="0 0 24 24"><use href="#icon-dove"/></svg>Formation</div>
+        <div class="phone-bottom-nav" style="background:#f3ede8;border-top-color:rgba(0,0,0,0.1)">
+          <div class="ph-nav-item active"><svg viewBox="0 0 24 24"><use href="#icon-compass"/></svg>Guide</div>
+          <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-dove"/></svg>Formation</div>
           <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-bible"/></svg>Readings</div>
-          <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-library"/></svg>Resources</div>
-          <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-headphones"/></svg>Listen</div>
+          <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-library"/></svg>Discover</div>
+          <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-headphones"/></svg>Music</div>
         </div>
       </div>
     </div>
