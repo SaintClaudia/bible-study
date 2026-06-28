@@ -1,30 +1,39 @@
-# ✝️ Bible Study — Catholic Pocket Companion
+# Bible Study — Catholic Pocket Companion
 
 > *Your faith, always within reach.*
 
-A responsive web app designed as a Catholic pocket companion — featuring Sunday readings, Mass Mode guidance, and faith formation content. Built as an MVP with a mobile-first approach, no frameworks, just clean HTML & CSS.
+The marketing website for [Bible Study](https://biblestudylovesyou.com) — a Catholic companion app for OCIA and everyday faith. Built as a static GitHub Pages site with no frameworks.
 
-## 🌐 Live Site
+## Live
 
-👉 [saintclaudia.github.io/bible-study](https://saintclaudia.github.io/bible-study)
+- **Marketing site:** [biblestudylovesyou.com](https://biblestudylovesyou.com)
+- **App:** [app.biblestudylovesyou.com](https://app.biblestudylovesyou.com)
 
-## ✨ Features
+## What the app offers
 
-- **Sunday Readings** — This week's Mass readings with Scripture context and themes
-- **Mass Mode** — Real-time guidance through the Order of the Mass
-- **Formation** — Learn the faith at your own pace: the Creed, sacraments, saints, and Church history
+- **Guide** — OCIA walkthrough covering what to expect, questions about commitment, cost, and preparation
+- **Formation** — Lessons on the Creed, sacraments, prayer, and a full Order of Mass guide
+- **Discover** — Curated Catholic resources and reading
+- **Music** — Royalty-free sacred music
+- **Sunday Readings** — This week's Mass readings with Scripture context
 
-## 🛠 Built With
+## Stack
 
-- HTML5 & CSS3 (no frameworks)
+- Vanilla HTML5 & CSS3
 - Playfair Display + Inter (Google Fonts)
-- Fully responsive — mobile, tablet, and desktop
+- Web3Forms for contact form submissions
+- Google Analytics (G-DD8L2T25FQ)
+- Hosted on GitHub Pages with custom domain via CNAME
 
-## 🗺 Roadmap
+## Pages
 
-- [ ] Full interior pages (Readings, Mass Mode, Formation)
-- [ ] Native mobile app (future)
+| File | Route |
+|---|---|
+| `index.html` | `/` — Hero, features, app preview |
+| `contact.html` | `/contact.html` |
+| `privacy.html` | `/privacy.html` |
+| `feedback.html` | `/feedback.html` |
 
-## 📄 License
+## Assets
 
-MIT
+Art card images are served from `app.biblestudylovesyou.com`. The `radiant-cross.png` and favicon SVG live in this repo root.
