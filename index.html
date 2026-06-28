@@ -199,17 +199,40 @@
       opacity: 0.75;
     }
 
-    /* Mobile: keep phone, hide cards + decos */
+    /* Mobile: scaled-down version of desktop layout */
     @media (max-width: 899px) {
       .hero-mockup {
-        background: var(--dark-bg);
         margin: 0 -24px;
         padding: 48px 0 0;
         overflow: hidden;
-        height: 360px;
+        height: 440px;
         align-items: flex-start;
+        background: var(--white);
       }
-      .hero-float-card, .hero-deco { display: none; }
+      .phone-frame {
+        width: 210px;
+        height: 455px;
+      }
+      .hero-float-card--left {
+        width: 118px; height: 145px;
+        left: -10px; top: 55px;
+      }
+      .hero-float-card--tr {
+        width: 140px; height: 100px;
+        right: -10px; top: 10px;
+      }
+      .hero-float-card--br {
+        width: 128px; height: 130px;
+        right: -10px; bottom: 10px;
+      }
+      .hero-deco--cross {
+        left: 42px; top: -36px;
+      }
+      .hero-deco--cross img { width: 44px; height: 44px; }
+      .hero-deco--dove { left: 4px; margin-top: 20px; }
+      .hero-deco--dove img { width: 52px; height: 52px; }
+      .hero-deco--hands { right: 2px; }
+      .hero-deco--hands img { width: 42px; height: 42px; }
     }
 
     @media (min-width: 900px) {
