@@ -235,7 +235,28 @@
       .hero-deco--hands img { width: 42px; height: 42px; }
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 900px) and (max-width: 1159px) {
+      .hero { padding: 72px 0 64px; }
+      .hero .container { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .phone-frame { width: 220px; height: 477px; }
+      .hero-float-card--left {
+        width: 138px; height: 170px;
+        left: -16px; top: 56px;
+      }
+      .hero-float-card--tr {
+        width: 162px; height: 115px;
+        right: -20px; top: 12px;
+      }
+      .hero-float-card--br {
+        width: 148px; height: 150px;
+        right: -22px; bottom: 12px;
+      }
+      .hero-deco--cross { left: 48px; top: -44px; }
+      .hero-deco--dove { left: 6px; }
+      .hero-deco--hands { right: 3px; }
+    }
+
+    @media (min-width: 1160px) {
       .hero { padding: 96px 0 80px; }
       .hero .container { grid-template-columns: 1fr 1fr; gap: 64px; }
     }
