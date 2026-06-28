@@ -199,8 +199,8 @@
       opacity: 0.75;
     }
 
-    /* Mobile */
-    @media (max-width: 899px) {
+    /* Phone (small mobile) */
+    @media (max-width: 599px) {
       .hero-mockup {
         margin: 0 -24px;
         padding: 40px 0 0;
@@ -223,18 +223,46 @@
         right: -5px; bottom: 10px;
       }
       .hero-deco--cross {
-        left: 155px; transform: translateX(-50%);
-        top: 22px;
+        left: 155px; transform: translateX(-50%); top: 22px;
       }
       .hero-deco--cross img { width: 44px; height: 44px; }
-      .hero-deco--dove {
-        left: 5px; top: auto; bottom: 108px; margin-top: 0;
-      }
+      .hero-deco--dove { left: 5px; top: auto; bottom: 108px; margin-top: 0; }
       .hero-deco--dove img { width: 56px; height: 56px; }
-      .hero-deco--hands {
-        right: 5px; top: 205px; margin-top: 0;
-      }
+      .hero-deco--hands { right: 5px; top: 205px; margin-top: 0; }
       .hero-deco--hands img { width: 48px; height: 48px; }
+    }
+
+    /* Tablet portrait */
+    @media (min-width: 600px) and (max-width: 899px) {
+      .hero-mockup {
+        margin: 0 -24px;
+        padding: 40px 0 0;
+        overflow: hidden;
+        height: 580px;
+        align-items: flex-start;
+        background: var(--white);
+      }
+      .phone-frame { width: 200px; height: 433px; }
+      .hero-float-card--left {
+        width: 220px; height: 200px;
+        left: -5px; top: 80px;
+      }
+      .hero-float-card--tr {
+        width: 262px; height: 184px;
+        right: -5px; top: 5px;
+      }
+      .hero-float-card--br {
+        width: 230px; height: 190px;
+        right: -5px; bottom: 5px;
+      }
+      .hero-deco--cross {
+        left: 195px; transform: translateX(-50%); top: 14px;
+      }
+      .hero-deco--cross img { width: 54px; height: 54px; }
+      .hero-deco--dove { left: 8px; top: auto; bottom: 118px; margin-top: 0; }
+      .hero-deco--dove img { width: 72px; height: 72px; }
+      .hero-deco--hands { right: 8px; top: 238px; margin-top: 0; }
+      .hero-deco--hands img { width: 64px; height: 64px; }
     }
 
     @media (min-width: 900px) and (max-width: 1159px) {
