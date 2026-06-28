@@ -199,40 +199,42 @@
       opacity: 0.75;
     }
 
-    /* Mobile: scaled-down version of desktop layout */
+    /* Mobile */
     @media (max-width: 899px) {
       .hero-mockup {
         margin: 0 -24px;
         padding: 40px 0 0;
         overflow: hidden;
-        height: 390px;
+        height: 500px;
         align-items: flex-start;
         background: var(--white);
       }
-      .phone-frame {
-        width: 155px;
-        height: 336px;
-      }
+      .phone-frame { width: 155px; height: 336px; }
       .hero-float-card--left {
-        width: 110px; height: 136px;
-        left: -10px; top: 48px;
+        width: 130px; height: 165px;
+        left: -5px; top: 88px;
       }
       .hero-float-card--tr {
-        width: 138px; height: 98px;
-        right: -10px; top: 8px;
+        width: 175px; height: 123px;
+        right: -5px; top: 5px;
       }
       .hero-float-card--br {
-        width: 124px; height: 126px;
-        right: -10px; bottom: 8px;
+        width: 142px; height: 145px;
+        right: -5px; bottom: 10px;
       }
       .hero-deco--cross {
-        left: 42px; top: -36px;
+        left: 155px; transform: translateX(-50%);
+        top: 22px;
       }
       .hero-deco--cross img { width: 44px; height: 44px; }
-      .hero-deco--dove { left: 4px; margin-top: 20px; }
-      .hero-deco--dove img { width: 52px; height: 52px; }
-      .hero-deco--hands { right: 2px; }
-      .hero-deco--hands img { width: 42px; height: 42px; }
+      .hero-deco--dove {
+        left: 5px; top: auto; bottom: 108px; margin-top: 0;
+      }
+      .hero-deco--dove img { width: 56px; height: 56px; }
+      .hero-deco--hands {
+        right: 5px; top: 205px; margin-top: 0;
+      }
+      .hero-deco--hands img { width: 48px; height: 48px; }
     }
 
     @media (min-width: 900px) and (max-width: 1159px) {
