@@ -187,12 +187,16 @@
     }
     .hero-deco--cross {
       left: 50%; transform: translateX(-50%);
-      top: -56px;
-      opacity: 0.65;
+      top: -58px;
+      opacity: 0.7;
     }
     .hero-deco--dove {
       left: 10px; top: 50%; margin-top: -20px;
       opacity: 0.3;
+    }
+    .hero-deco--hands {
+      right: 6px; top: 47%; margin-top: -23px;
+      opacity: 0.4;
     }
 
     /* Mobile: keep phone, hide cards + decos */
@@ -555,25 +559,27 @@
 
       <!-- Radiant cross -->
       <div class="hero-deco hero-deco--cross">
-        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" stroke="currentColor" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg">
-          <rect x="25.5" y="7" width="7" height="44" rx="1.5" stroke-width="2"/>
-          <rect x="9" y="21.5" width="40" height="7" rx="1.5" stroke-width="2"/>
-          <line x1="29" y1="1.5" x2="29" y2="4.5" stroke-width="2"/>
-          <line x1="29" y1="53.5" x2="29" y2="56.5" stroke-width="2"/>
-          <line x1="1.5" y1="29" x2="4.5" y2="29" stroke-width="2"/>
-          <line x1="53.5" y1="29" x2="56.5" y2="29" stroke-width="2"/>
-          <line x1="7.5" y1="7.5" x2="9.6" y2="9.6" stroke-width="2"/>
-          <line x1="48.4" y1="7.5" x2="50.5" y2="9.6" stroke-width="2"/>
-          <line x1="7.5" y1="50.5" x2="9.6" y2="48.4" stroke-width="2"/>
-          <line x1="48.4" y1="50.5" x2="50.5" y2="48.4" stroke-width="2"/>
-          <line x1="16" y1="3" x2="17.2" y2="5.8" stroke-width="1.5"/>
-          <line x1="42" y1="3" x2="40.8" y2="5.8" stroke-width="1.5"/>
-          <line x1="55" y1="16" x2="52.2" y2="17.2" stroke-width="1.5"/>
-          <line x1="55" y1="42" x2="52.2" y2="40.8" stroke-width="1.5"/>
-          <line x1="42" y1="55" x2="40.8" y2="52.2" stroke-width="1.5"/>
-          <line x1="16" y1="55" x2="17.2" y2="52.2" stroke-width="1.5"/>
-          <line x1="3" y1="42" x2="5.8" y2="40.8" stroke-width="1.5"/>
-          <line x1="3" y1="16" x2="5.8" y2="17.2" stroke-width="1.5"/>
+        <svg width="62" height="62" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round">
+          <!-- Rays behind cross -->
+          <line x1="31" y1="1"  x2="31" y2="7"  stroke-width="2.5"/>
+          <line x1="31" y1="55" x2="31" y2="61" stroke-width="2.5"/>
+          <line x1="1"  y1="31" x2="7"  y2="31" stroke-width="2.5"/>
+          <line x1="55" y1="31" x2="61" y2="31" stroke-width="2.5"/>
+          <line x1="8"  y1="8"  x2="12.5" y2="12.5" stroke-width="2"/>
+          <line x1="49.5" y1="8"  x2="54" y2="12.5" stroke-width="2"/>
+          <line x1="8"  y1="54" x2="12.5" y2="49.5" stroke-width="2"/>
+          <line x1="49.5" y1="54" x2="54" y2="49.5" stroke-width="2"/>
+          <line x1="16" y1="3"  x2="18"  y2="7"   stroke-width="1.5"/>
+          <line x1="46" y1="3"  x2="44"  y2="7"   stroke-width="1.5"/>
+          <line x1="59" y1="16" x2="55"  y2="18"  stroke-width="1.5"/>
+          <line x1="59" y1="46" x2="55"  y2="44"  stroke-width="1.5"/>
+          <line x1="46" y1="59" x2="44"  y2="55"  stroke-width="1.5"/>
+          <line x1="16" y1="59" x2="18"  y2="55"  stroke-width="1.5"/>
+          <line x1="3"  y1="46" x2="7"   y2="44"  stroke-width="1.5"/>
+          <line x1="3"  y1="16" x2="7"   y2="18"  stroke-width="1.5"/>
+          <!-- Filled cross body -->
+          <rect x="26" y="9"  width="10" height="44" rx="1.5" fill="currentColor" stroke="none"/>
+          <rect x="9"  y="23" width="44" height="10" rx="1.5" fill="currentColor" stroke="none"/>
         </svg>
       </div>
 
@@ -597,6 +603,16 @@
             <path d="M0 0c-14.346 26.879-22.452 57.54-22.452 90h108.63c73.733 0 138.251-48.062 159.986-117.485 3.393-10.838 7.383-21.478 11.731-31.969" transform="translate(97.452 407)"/>
             <path d="M0 0h30" transform="translate(392 302)"/>
           </g>
+        </svg>
+      </div>
+
+      <!-- Praying hands deco -->
+      <div class="hero-deco hero-deco--hands">
+        <svg width="38" height="46" viewBox="0 0 38 46" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 4 C16.5 8 13 13.5 12.5 19.5 L11.5 29 C11 32.5 12.5 35 16 35 L19 35"/>
+          <path d="M19 4 C21.5 8 25 13.5 25.5 19.5 L26.5 29 C27 32.5 25.5 35 22 35 L19 35"/>
+          <line x1="19" y1="35" x2="19" y2="38"/>
+          <path d="M13.5 36.5 C13.5 40 15.8 43 19 43 C22.2 43 24.5 40 24.5 36.5"/>
         </svg>
       </div>
 
