@@ -415,6 +415,8 @@
     }
     .ph-nav-item.active { color: #1a1a18; }
     .ph-nav-item svg { width: 20px; height: 20px; }
+    .ph-nav-item img { width: 20px; height: 20px; object-fit: contain; opacity: 0.62; }
+    .ph-nav-item.active img { opacity: 1; }
 
     /* ══ FADE-IN ANIMATION ══ */
     .ph-anim {
@@ -463,6 +465,7 @@
       display: flex; align-items: center; justify-content: center; margin-top: 2px;
     }
     .feature-icon svg { width: 26px; height: 26px; }
+    .feature-icon img { width: 26px; height: 26px; object-fit: contain; }
     .feature-text h3 {
       font-family: 'Playfair Display', serif;
       font-size: 20px; font-weight: 700; letter-spacing: -0.01em;
@@ -633,19 +636,6 @@
       <polygon points="16.5,7.5 13.5,13.5 7.5,16.5 10.5,10.5"/>
     </symbol>
 
-    <!-- PRAYING HANDS (Prayer) -->
-    <symbol id="icon-prayer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 4v16"/>
-      <path d="M12 4c-2.5 2.5-4 5.8-4 9.2 0 2.8 1 5.1 2.6 6.8"/>
-      <path d="M12 4c2.5 2.5 4 5.8 4 9.2 0 2.8-1 5.1-2.6 6.8"/>
-    </symbol>
-
-    <!-- HALO (Saint) -->
-    <symbol id="icon-saint" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <ellipse cx="12" cy="5.5" rx="5" ry="1.6"/>
-      <circle cx="12" cy="9" r="3.4"/>
-      <path d="M4.5 21a7.5 7.5 0 0 1 15 0"/>
-    </symbol>
   </defs>
 </svg>
 
@@ -791,8 +781,8 @@
           <div class="ph-nav-item active"><svg viewBox="0 0 24 24"><use href="#icon-compass"/></svg>Guide</div>
           <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-dove"/></svg>Formation</div>
           <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-bible"/></svg>Readings</div>
-          <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-prayer"/></svg>Prayer</div>
-          <div class="ph-nav-item"><svg viewBox="0 0 24 24"><use href="#icon-saint"/></svg>Saint</div>
+          <div class="ph-nav-item"><img src="assets/images/pray.webp" alt="" />Prayer</div>
+          <div class="ph-nav-item"><img src="assets/images/catholic-life.webp" alt="" />Saint</div>
         </div>
       </div>
     </div>
@@ -838,7 +828,7 @@
 
       <div class="feature">
         <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><use href="#icon-prayer"/></svg>
+          <img src="assets/images/pray.webp" alt="" />
         </div>
         <div class="feature-text">
           <h3>Prayer</h3>
@@ -848,7 +838,7 @@
 
       <div class="feature">
         <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><use href="#icon-saint"/></svg>
+          <img src="assets/images/catholic-life.webp" alt="" />
         </div>
         <div class="feature-text">
           <h3>Saint</h3>
