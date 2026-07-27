@@ -13,9 +13,9 @@ The marketing website for [Bible Study](https://biblestudylovesyou.com) — a Ca
 
 - **Guide** — OCIA walkthrough covering what to expect, questions about commitment, cost, and preparation
 - **Formation** — Lessons on the Creed, sacraments, prayer, and a full Order of Mass guide
-- **Discover** — Curated Catholic resources and reading
-- **Music** — Royalty-free sacred music
 - **Sunday Readings** — This week's Mass readings with Scripture context
+- **Prayer** — Essential Catholic prayers, taught one small piece at a time
+- **Saint** — A new saint's story each day
 
 ## Stack
 
